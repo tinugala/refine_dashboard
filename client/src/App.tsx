@@ -57,7 +57,7 @@ function App() {
       const profileObj = credential ? parseJwt(credential) : null;
 
       if (profileObj) {
-        const response = await fetch('https://refine-dashboard-uibr.onrender.com', {
+        const response = await fetch('https://refine-dashboard-uibr.onrender.com/api/v1/users', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
